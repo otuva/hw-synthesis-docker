@@ -1,0 +1,25 @@
+version: '3.9'
+services:
+  handwriting:
+    build: .
+    volumes:
+      - model:/app/model
+      - img:/app/img
+      - ./main.py:/app/main.py
+    tty: true
+    stdin_open: true
+    command: python /app/main.py
+
+volumes:
+  model:
+    driver: local
+    driver_opts:
+      type: none
+      device: ./model
+      o: bind
+  img:
+    driver: local
+    driver_opts:
+      type: none
+      device: ./img
+      o: bind
