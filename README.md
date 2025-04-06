@@ -1,3 +1,4 @@
+probably still works. idk.
 
 ```
 $ git clone https://github.com/otuva/hw-synthesis-docker.git
